@@ -1,0 +1,8 @@
+[Unit]
+Description=Refresh gpg keys
+Wants=network.target
+After=dbus-org.freedesktop.NetworkManager.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/gpg2 --refresh-keys
